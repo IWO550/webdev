@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Log in</title>
+        <link rel="icon" href="img/logo.ico" type="image/ico" />
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="formcontainer">
+                <form class="form" id=operation1 action="login.php" method="post">
+                <h1>Log in</h1>
+                    <input type="text" name="email" placeholder="email@email.com" required="required" />
+                    <input type="password" name="password" placeholder="Password" required="required" />
+                    <button type="submit" class="btn">Log in</button>
+                    <h3 onclick="showOperation2()" >You don't have an account yet? Sign up</h3>
+                    <h3 onclick="showOperation3()" >Don't remember your password?</h3>
+                </form>
+                <form class="form1" id=operation2 action="signup.php" method="post" style="display:none">
+                    <h1>Sign up</h1>
+                    <input type="username" name="username" placeholder="Username" required="required" />
+                        <input type="text" name="email" placeholder="email@email.com" required="required" />
+                        <input type="password" name="password" placeholder="Password" required="required" />
+                        <button type="submit" class="btn">Sign up</button>
+                        <h3 onclick="showOperation1()">Do you already have an account? Log in</h3>
+                </form>
+                <form class="form2" id=operation3 action="password.php" method="post" style="display:none">
+                    <h2>Recover your password</h2>
+                        <input type="text" name="email" placeholder="email@email.com" required="required" />
+                        <button type="submit" class="btn" onclick="showOperation4()">Recover it</button>
+                        <h3 onclick="showOperation1()">Do you want to log in? Log in</h3>
+                    <h3 onclick="showOperation2()" >You don't have an account yet? Sign up</h3>
+                </form>
+                <div id=operation4 class="recover" style="display:none">
+                    <h2>Check your email</h2>
+                    <p> We have sent you an email.</p>
+                </div>
+            </div>
+            <div class="sphere"></div>
+            <div class="sphere2"></div>
+        </div>
+    </body>
+</html>
+
